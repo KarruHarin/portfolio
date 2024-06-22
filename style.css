@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body, html {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    cursor: url('./cursor.svg'),auto;
+}
+
+.background {
+    background: linear-gradient(90deg, #F5E3E6, #D9E4F5);
+
+ /* Gradient from #12100E to #2B4162 */
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+     /* Full viewport height */
+}
+.entry{
+    height: 100vh;
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(to right, #91A6FF 1px, transparent 1px) 0 0,
+        linear-gradient(to bottom, #91A6FF 1px, transparent 1px) 0 0;
+    background-size: 70px 70px; /* Size of the grid cells */
+    pointer-events: none; /* Ensures grid lines do not interfere with any interactions */
+}
+h1{
+    font-family: 'Commissioner',sans-serif;
+   
+    
+    
+}
+
+@property --rotate{
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.light{
+  background-image: conic-gradient(
+    from var(--rotate) at 29% 10%,
+    #0B1012 40%,
+    #20A4F3,
+    #0B1012 60%
+  );
+ font-size: 90px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: rotateLight 3s ease-in-out  infinite alternate ;
+
+}
+
+@keyframes rotateLight{
+    from{
+        --rotate:0.15turn
+
+    }to{
+        --rotate:-0.16turn
+    }
+}
+.ninety{
+    font-size: 90px;
+}
+#dots{
+    background-color: transparent;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.outer{
+    margin: 0 50px;
+    background: #111 ;
+    position: relative;
+
+
+}
+.button{
+    height: 70px;
+    width: 220px;
+    border-radius: 50px;
+
+}
+
+.outer button , .outer span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.outer button{
+   
+    background: #111;
+    color: #f2f2f2;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 9;
+}
+
+.button button{
+    height: 60px;
+    width: 210px;
+    border-radius: 50px;
+}
+.outer span{
+    height: 100%;
+    width: 100%;
+    background: inherit;
+
+}
+.button span{
+    border-radius: 50px;
+}
+.outer:hover span:nth-child(1){
+    filter: blur(7px);
+}
+.outer:hover span:nth-child(2){
+    filter: blur(14px);
+}
+.outer:hover{
+    animation: rotatte 1.5s linear infinite;
+    background: linear-gradient(#14ffe9,#ffeb3b,#ff00e0);
+}
+@keyframes rotatte{
+ 0%{
+    filter: hue-rotate(0deg);
+ }
+ 100%{
+    filter: hue-rotate(360deg);
+ }
+}
+

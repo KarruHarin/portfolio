@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume-HarinK</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Replace with your own Tailwind CSS link or use npm/yarn for installation -->
+</head>
+<body class="bg-gray-100 h-screen">
+    <header class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto px-4">
+            <h1 class="text-2xl font-bold">My Projects</h1>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8 ">
+        <!-- Projects Section -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Replace with your project cards -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="./assets/Project1.png" alt="Project 1" class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h2 class="text-xl font-semibold mb-2">MyKitchen</h2>
+                    <p class="text-gray-600">A responsive recipe website using React,Tailwind CSS and a public API. </p>
+                    <a href="https://bunnykarru.github.io/myKitchen/" class="mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">View Project</a>
+                </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="./assets/Project2.png" alt="Project 2" class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h2 class="text-xl font-semibold mb-2">Todo</h2>
+                    <p class="text-gray-600">A responsive Todo App built with React, utilizing Context API for state management and local storage for persistent data.</p>
+                    <a href="https://bunnykarru.github.io/todo/" class="mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">View Project</a>
+                </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="./assets/Project3.png" alt="Project 2" class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h2 class="text-xl font-semibold mb-2">Draw</h2>
+                    <p class="text-gray-600">One of my first Projects.(Not optimized for mobiles)</p>
+                    <a href="https://bunnykarru.github.io/draw/" class="mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">View Project</a>
+                </div>
+            </div>
+
+
+            <!-- Repeat the above div for each project -->
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
