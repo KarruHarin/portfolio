@@ -1,0 +1,152 @@
+/* Import Google Fonts and Tailwind CSS at the beginning */
+
+/* General Reset and Base Styles */
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Body and HTML Styles */
+body, html {
+    margin: 0;
+    height: 100%;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    cursor: url('./cursor.svg'), auto;
+}
+
+/* Background Styles */
+.background {
+    background: linear-gradient(90deg, #F5E3E6, #D9E4F5);
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow-y: auto; /* Allow vertical scroll if content exceeds viewport */
+}
+
+/* Entry Section Height */
+.entry {
+    height: 100vh; /* Full viewport height */
+}
+
+/* Background Grid Overlay */
+.background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(to right, #91A6FF 1px, transparent 1px) 0 0,
+        linear-gradient(to bottom, #91A6FF 1px, transparent 1px) 0 0;
+    background-size: 70px 70px; /* Size of the grid cells */
+    pointer-events: none; /* Ensure grid lines do not interfere with interactions */
+}
+
+/* Heading Styles */
+h1 {
+    font-family: 'Commissioner', sans-serif;
+    font-size: 36px; /* Adjusted font size for readability on small screens */
+}
+
+/* Animated Text Background (Light Effect) */
+.light {
+    background-image: conic-gradient(
+        from var(--rotate) at 29% 10%,
+        #0B1012 40%,
+        #20A4F3,
+        #0B1012 60%
+    );
+    font-size: 24px; /* Adjusted font size */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: rotateLight 3s ease-in-out infinite alternate;
+}
+
+/* Keyframes for Light Animation */
+@keyframes rotateLight {
+    from {
+        --rotate: 0.15turn;
+    }
+    to {
+        --rotate: -0.16turn;
+    }
+}
+
+/* Ninety Degree Font Size */
+.ninety {
+    font-size: 36px; /* Adjusted font size */
+}
+
+/* Dots Canvas Styles */
+#dots {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Outer Button Container */
+.outer {
+    margin: 0 20px; /* Adjusted margin for smaller screens */
+    background: #111;
+    position: relative;
+    border-radius: 25px; /* Reduced border radius */
+}
+
+/* Button Container Styles */
+.button {
+    height: 50px; /* Reduced button height */
+    width: 160px; /* Reduced button width */
+    border-radius: 25px; /* Reduced border radius */
+}
+
+/* Button and Span Positioning */
+.outer button, .outer span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Button Styles */
+.outer button {
+    background: #111;
+    color: #f2f2f2;
+    outline: none;
+    border: none;
+    font-size: 14px; /* Adjusted font size */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 9;
+}
+
+/* Button Hover Effects */
+.outer:hover span:nth-child(1) {
+    filter: blur(5px); /* Reduced blur effect */
+}
+
+.outer:hover span:nth-child(2) {
+    filter: blur(10px); /* Reduced blur effect */
+}
+
+/* Outer Hover Animation */
+.outer:hover {
+    animation: rotatte 1.5s linear infinite;
+    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+}
+
+/* Keyframes for Hover Animation */
+@keyframes rotatte {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
